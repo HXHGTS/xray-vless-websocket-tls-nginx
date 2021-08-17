@@ -2,23 +2,11 @@
 
 ## 警告⚠：此技术仅限用于个人搭建游戏加速器使用！！！若用于其他违法目的，后果自负！！！
 
-手动搭建xray服务器(vmess+websocket+tls)，并部署网页页面，支持cdn中转
+手动搭建xray服务器(vless+websocket+tls)，并部署网页页面，支持cdn中转
 
 KVM/XEN机器执行(CentOS7):
 
-`yum install -y gcc wget && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls-nginx/main/v2ray.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
-
-OpenVZ机器执行(CentOS7):
-
-`yum install -y gcc wget && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls-nginx/main/v2ray_no_bbr.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
-
-KVM/XEN机器执行(Debian8):
-
-`apt-get install -y gcc wget && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls-nginx/main/v2ray-debian.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
-
-KVM/XEN/OVZ机器执行(Debian10):
-
-`apt-get install -y gcc wget && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls-nginx/main/v2ray-ovz-debian10.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
+`yum install -y gcc wget && wget https://raw.githubusercontent.com/HXHGTS/xray-vless-websocket-tls-nginx/main/v2ray.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
 
 第一次点击安装后会自动升级系统内核并触发重启，重启后输入
 
@@ -26,7 +14,7 @@ KVM/XEN/OVZ机器执行(Debian10):
 
 CDN套用方法请参看[CDN套用方法](/cdn.md)
 
-脚本生成的二维码可以用v2ray客户端扫描导入，VMESS链接可以直接导入v2ray客户端或在[这里](https://acl4ssr-sub.github.io/)生成Clash链接以导入Clash
+脚本生成的二维码可以用v2ray/xray客户端扫描导入，VLESS链接可以导入Clash.NET
 
 ### 安装前准备：
 

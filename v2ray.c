@@ -199,13 +199,13 @@ int KernelUpdate() {
         fprintf(config, "%s", sni);
         fclose(config);
         printf("正在升级新内核. . .\n");
-        system("wget https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/KernelUpdate.sh -O KernelUpdate.sh");
+        system("wget https://raw.githubusercontent.com/HXHGTS/TCPOptimization/master/KernelUpdate.sh -O KernelUpdate.sh");
         system("chmod +x KernelUpdate.sh");
         printf("正在升级，将自动触发重启以应用配置. . .\n");
         system("bash KernelUpdate.sh");
     }
     else {
-        system("curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO.sh | sh");
+        system("curl -sSL https://raw.githubusercontent.com/HXHGTS/TCPOptimization/master/TCPO.sh | sh");
     }
     return 0;
 }

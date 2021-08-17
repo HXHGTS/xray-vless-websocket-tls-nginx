@@ -184,7 +184,6 @@ int QRCodeGen() {
     config = fopen("/usr/local/etc/xray/vless.txt", "w"); 
     fprintf(config, "vless://%s@%s:2053?security=tls#%s\n",uuid,sni,sni);
     fclose(config);
-    system("cat /usr/local/etc/xray/vless.txt > /usr/local/etc/xray/vless.txt");
     return 0;
 }
 

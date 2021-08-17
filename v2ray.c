@@ -182,7 +182,7 @@ int install_xray() {
 
 int QRCodeGen() {
     config = fopen("/usr/local/etc/xray/vless.txt", "w"); 
-    fprintf(config, "vless://%s@%s:2053?type=ws&security=tls&host=%s&path=%%2FISODownload#%s\n",uuid,sni,sni,sni);
+    fprintf(config, "vless://%s@%s:2053?type=ws&security=tls&host=%s&sni=%s&path=%%2FISODownload#%s\n",uuid,sni,sni,sni,sni);
     fclose(config);
     return 0;
 }

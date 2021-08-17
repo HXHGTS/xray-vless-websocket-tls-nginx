@@ -1,0 +1,28 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - name: 🇸🇬 VLESS测试
+    server: dash.cloudflare.com
+    port: 2053
+    type: vless
+    uuid: //UUID
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-path: /ISODownload
+    ws-headers:
+      Host: //SNI
+    udp: true
+proxy-groups:
+  - name: Proxies
+    type: select
+    proxies:
+      - 🇸🇬 VLESS测试
+rules:
+ - GEOIP,CN,DIRECT
+ - MATCH,Proxies
